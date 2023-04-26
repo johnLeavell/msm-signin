@@ -18,6 +18,8 @@ Rails.application.routes.draw do
   # DELETE
   get("/delete_bookmark/:path_id", { :controller => "bookmarks", :action => "destroy" })
 
+  
+
   #------------------------------
 
   # Routes for the User account:

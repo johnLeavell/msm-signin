@@ -1,5 +1,23 @@
-<h1>Homepage</h1>
+<% if session[:user_id] == nil%>
+  <ul>
+    <li><a href="/user_sign_in">Sign in</a>
+    </li>
+    <li><a href="/user_sign_up">Sign up</a>
+    </li>
+    <li><a href="/">Home</a></a>
+  </li>
+</ul>
 
+<%else%>
+
+  <ul>
+    <li><a href="/user_sign_out/">Sign out</a></li>
+    <li><a href="/bookmarks">My bookmarks</a></li>
+    <li><a href="/">Home</a></li>
+  </ul>
+<% end %>
+
+<h1>Homepage</h1>
 <ul>
   <li>
     <a href="/directors">
